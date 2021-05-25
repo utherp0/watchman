@@ -16,7 +16,7 @@ spec:
       kind: Broker
       name: default
     properties:
-      type: telegram.message
+      type: watchmanevent
       
 ---
 apiVersion: camel.apache.org/v1alpha1

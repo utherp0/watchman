@@ -14,6 +14,7 @@ public class Watchman
 
     String payload = new String(input);
     System.out.println( payload );
+    System.out.println( inputEvent );
     //return output;
   }
 }

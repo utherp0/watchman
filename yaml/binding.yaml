@@ -1,0 +1,19 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: telegram-bot-source
+spec:
+  source:
+    properties:
+      authorizationToken: "1558547650:AAHUZY0Row0xiF5aDn1s8L6Fwf7WJ3jAMPQ"
+    ref:
+      apiVersion: camel.apache.org/v1alpha1
+      kind: Kamelet
+      name: telegram-source
+  sink:
+    ref:
+      apiVersion: eventing.knative.dev/v1
+      kind: Broker
+      name: default
+    properties:
+      type: watchmanevent

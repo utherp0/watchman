@@ -1,7 +1,7 @@
 package org.uth.watchman;
 
 import io.quarkus.funqy.*;
-import io.cloudevents.*;
+import io.quarkus.funqy.knative.events.*;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.json.Json;
 

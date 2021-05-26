@@ -11,7 +11,7 @@ public class Watchman
   private static final Logger log = Logger.getLogger(Watchman.class.getName());
 
   @Funq
-  public void process( String input, @Context CloudEvent inputEvent )
+  public void process( byte[] input, @Context CloudEvent inputEvent )
   {
     ResponsePayload output = new ResponsePayload();
 

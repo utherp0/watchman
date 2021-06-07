@@ -28,7 +28,7 @@ public class Watchman
     JsonObject message = new JsonObject(payload);
 
     JsonObject messageFrom = message.getJsonObject("from");
-    String sender = messageFrom.getString("last_name") + "," + messageFrom.getString("first_name");
+    String sender = messageFrom.getString("last_name") + ", " + messageFrom.getString("first_name");
     String messageText = message.getString("text");
     JsonObject messageChat = message.getJsonObject("chat");
     String chatID = messageChat.getString("id");

@@ -10,4 +10,4 @@ builderMap:
   jvm: quay.io/boson/faas-quarkus-jvm-builder
   native: quay.io/boson/faas-quarkus-native-builder
 envVars:
-  TEST_ENV: 200
+  BOT: 1558547650:AAHUZY0Row0xiF5aDn1s8L6Fwf7WJ3jAMPQ

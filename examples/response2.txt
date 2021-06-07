@@ -1,0 +1,2 @@
+{"date":1622724141,"from":{"id":266265646,"username":null,"bot":false,"first_name":"Ian","last_name":"Lawson","is_bot":false},"text":"Wibble wobble wubble","chat":{"id":"-589053727","title":"Bot Home","type":"group","all_members_are_administrators":true},"photo":null,"video":null,"audio":null,"document":null,"sticker":null,"entities":null,"caption":null,"game":null,"message_id":116,"location":null,"caption_entities":null,"reply_markup":null}
+

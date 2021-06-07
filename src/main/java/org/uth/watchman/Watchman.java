@@ -33,7 +33,7 @@ public class Watchman
     JsonObject messageChat = message.getJsonObject("chat");
     String chatID = messageChat.getString("id");
 
-    String telegramTarget = "https://api.telegram.org/bot" + _bottoken + "/sendMessage";
+    String telegramTarget = "https://api.telegram.org/bot" + _bottoken + "/sendMessage?text=test&chat_id=" + chatID;
 
     // Post a telegram response for the hell of it
     Postman postman = new Postman( telegramTarget );
@@ -43,7 +43,7 @@ public class Watchman
     payloadOutput.put("chat_id", chatID );
     payloadOutput.put("text", sender + " sent a message of length " + messageText.length());
 
-    postman.deliver(payloadOutput);
+    postman.deliver(null);
 
     //return output;
   }

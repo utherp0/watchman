@@ -1,7 +1,6 @@
 package org.uth.watchman.utils;
 
 import java.net.*;
-import java.util.Map;
 
 public class Postman 
 {
@@ -12,51 +11,19 @@ public class Postman
     _target = targetURL;
   }
 
-  public boolean deliver( Map<String,String> optionalPayload )
+  public boolean deliver( String message, String chatID )
   {
     try
     {
-      //System.out.println( "Posting to " + _target );
-      //System.out.println( "  (Optional Payload: " + optionalPayload + ")");
-
-      URL url = new URL(_target);
+      String completeURL = _target + "?chat_id=" + chatID + "&text=" + message.replaceAll( " ", "%20" );
+      
+      URL url = new URL(completeURL);
       HttpURLConnection postConnection = (HttpURLConnection)url.openConnection();
 
       postConnection.setRequestMethod( "POST" );
       postConnection.setRequestProperty( "Content-Type", "application/json" );
 
       postConnection.setDoOutput(true);
-
-      // Process the optional payload parameters
-      if( optionalPayload != null )
-      {
-        StringBuilder payload = new StringBuilder();
-
-        boolean firstParam = true;
-
-        for( String key : optionalPayload.keySet() )
-        {
-          String value = optionalPayload.get(key);
-
-          if( !firstParam )
-          {
-            payload.append( "&" + key + "=" + value );
-          }
-          else
-          {
-            payload.append( key + "=" + value );
-            firstParam = false;
-          }
-        }
-
-        String converted = ( payload.toString() ).replaceAll(" ", "%20");
-
-        System.out.println( "Sending: " + converted );
-
-        byte[] postDataBytes = converted.getBytes("UTF-8");
-
-        postConnection.getOutputStream().write(postDataBytes);
-      }
 
       int responseCode = postConnection.getResponseCode();
 

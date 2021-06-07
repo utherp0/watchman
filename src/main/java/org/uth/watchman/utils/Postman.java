@@ -58,7 +58,7 @@ public class Postman
 
       int responseCode = postConnection.getResponseCode();
 
-      System.out.println( responseCode + " from " + _target );
+      System.out.println( responseCode + " " + postConnection.getResponseMessage() + " from " + _target );
 
       return true;
     }

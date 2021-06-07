@@ -40,11 +40,11 @@ public class Postman
 
           if( !firstParam )
           {
-            payload.append( "&" + value );
+            payload.append( "&" + key + "=" + value );
           }
           else
           {
-            payload.append( value );
+            payload.append( key + "=" + value );
             firstParam = false;
           }
         }

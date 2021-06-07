@@ -51,6 +51,8 @@ public class Postman
 
         String converted = ( payload.toString() ).replaceAll(" ", "%20");
 
+        System.out.println( "Sending: " + converted );
+
         byte[] postDataBytes = converted.getBytes("UTF-8");
 
         postConnection.getOutputStream().write(postDataBytes);

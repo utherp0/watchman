@@ -9,11 +9,6 @@ public class Processor
       return null;
     }
 
-    if( sender.indexOf("No9") != -1 )
-    {
-      return sender + " sent " + message.length() + " pointless rubbish as per usual";
-    }
-
     return sender + " sent " + message.length() + " characters...";
   }  
 }
